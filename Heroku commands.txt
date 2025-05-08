@@ -1,0 +1,16 @@
+https://firstcloud-825aabd1ff87.herokuapp.com/
+
+
+docker build -t first-heroku-image .
+docker images
+docker run <image>
+
+heroku login
+heroku container:login
+heroku create firstcloud
+docker build -t registry.heroku.com/firstcloud/web .
+docker images
+docker push registry.heroku.com/firstcloud/web
+heroku stack:set container --app firstcloud
+heroku container:release web --app first cloud
+heroku open –app firstcloud
