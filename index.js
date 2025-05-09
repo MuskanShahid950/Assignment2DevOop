@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3001; // Fallback for local dev
-
+console.log("Server starting..."); 
 app.get('/', (req, res) => {
   res.send('App deployed on Railway');
 });
